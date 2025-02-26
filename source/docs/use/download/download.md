@@ -47,8 +47,23 @@ How you download HACS depends on your Home Assistant installation type. In the i
 
         ```bash
         wget -O - https://get.hacs.xyz | bash -
-        ```
 
+        ```
+If you are a user in mainland China, you can use the following method:
+```
+export https_proxy=http://server:port
+curl -L -o hacs.sh https://get.hacs.xyz
+vim hacs.sh
+```
+Replace the following line with:
+```
+wget "https://github.com/hacs/integration/releases/latest/download/hacs.zip"
+curl -L -o hacs.zip "https://github.com/hacs/integration/releases/latest/download/hacs.zip"
+```
+Then run the script:
+```
+sh hacs.sh
+```
 ### Finalizing steps
 
 1. Restart Home Assistant.
